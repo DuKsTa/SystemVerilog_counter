@@ -1,0 +1,92 @@
+|counter
+clk => value[0]~reg0.CLK
+clk => value[1]~reg0.CLK
+clk => value[2]~reg0.CLK
+clk => value[3]~reg0.CLK
+clk => value[4]~reg0.CLK
+clk => value[5]~reg0.CLK
+reset => value[0]~reg0.ACLR
+reset => value[1]~reg0.ACLR
+reset => value[2]~reg0.ACLR
+reset => value[3]~reg0.ACLR
+reset => value[4]~reg0.ACLR
+reset => value[5]~reg0.ACLR
+value[0] << value[0].DB_MAX_OUTPUT_PORT_TYPE
+value[1] << value[1].DB_MAX_OUTPUT_PORT_TYPE
+value[2] << value[2].DB_MAX_OUTPUT_PORT_TYPE
+value[3] << value[3].DB_MAX_OUTPUT_PORT_TYPE
+value[4] << value[4].DB_MAX_OUTPUT_PORT_TYPE
+value[5] << value[5].DB_MAX_OUTPUT_PORT_TYPE
+data1[0] << sevenseg2:s0.data1
+data1[1] << sevenseg2:s0.data1
+data1[2] << sevenseg2:s0.data1
+data1[3] << sevenseg2:s0.data1
+data1[4] << sevenseg2:s0.data1
+data1[5] << sevenseg2:s0.data1
+data1[6] << sevenseg2:s0.data1
+data10[0] << sevenseg2:s0.data10
+data10[1] << sevenseg2:s0.data10
+data10[2] << sevenseg2:s0.data10
+data10[3] << sevenseg2:s0.data10
+data10[4] << sevenseg2:s0.data10
+data10[5] << sevenseg2:s0.data10
+data10[6] << sevenseg2:s0.data10
+
+
+|counter|sevenseg2:s0
+data1[0] <= sevenseg:d1.data
+data1[1] <= sevenseg:d1.data
+data1[2] <= sevenseg:d1.data
+data1[3] <= sevenseg:d1.data
+data1[4] <= sevenseg:d1.data
+data1[5] <= sevenseg:d1.data
+data1[6] <= sevenseg:d1.data
+data10[0] <= sevenseg:d0.data
+data10[1] <= sevenseg:d0.data
+data10[2] <= sevenseg:d0.data
+data10[3] <= sevenseg:d0.data
+data10[4] <= sevenseg:d0.data
+data10[5] <= sevenseg:d0.data
+data10[6] <= sevenseg:d0.data
+address[0] => Mod0.IN9
+address[0] => Div0.IN9
+address[1] => Mod0.IN8
+address[1] => Div0.IN8
+address[2] => Mod0.IN7
+address[2] => Div0.IN7
+address[3] => Mod0.IN6
+address[3] => Div0.IN6
+address[4] => Mod0.IN5
+address[4] => Div0.IN5
+address[5] => Mod0.IN4
+address[5] => Div0.IN4
+
+
+|counter|sevenseg2:s0|sevenseg:d1
+data[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+address[0] => Decoder0.IN3
+address[1] => Decoder0.IN2
+address[2] => Decoder0.IN1
+address[3] => Decoder0.IN0
+
+
+|counter|sevenseg2:s0|sevenseg:d0
+data[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+address[0] => Decoder0.IN3
+address[1] => Decoder0.IN2
+address[2] => Decoder0.IN1
+address[3] => Decoder0.IN0
+
+
